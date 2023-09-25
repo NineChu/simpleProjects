@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000ff;
+}
+h3, p {
+  color: #ffffdfff;
+}
+main {
+  display: flex;
+}
+footer {
+  display: flex;
+  padding: 2rem;
+}
+footer > div > h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+div {
+  display: inline;
+  margin: auto;
+}
+a {
+  color: #004080ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #00ffffff;
+}
+
+#gradientLettersDiv {
+  opacity: 0;
+  mask: radial-gradient(circle, #000000ff 15%, #0000003f 35%, #00000000 45%) var(--mouse-x) var(--mouse-y) no-repeat;
+  -webkit-mask: radial-gradient(circle, #000000ff 15%, #0000003f 35%, #00000000 45%) var(--mouse-x) var(--mouse-y) no-repeat;
+  transition: opacity 2s ease-in .2s;
+}
+#gradientLettersDiv > p {
+  font-family: "Consolas";
+  font-size: 1rem;
+  cursor: default;
+}

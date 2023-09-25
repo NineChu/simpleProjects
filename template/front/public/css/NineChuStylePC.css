@@ -27,8 +27,12 @@ h6,
 p,
 label,
 span,
-pre {
+pre,
+code {
   color: #ffffdfff;
+}
+code {
+  background-color: #202020ff;
 }
 a {
   color: #40afdfff;
