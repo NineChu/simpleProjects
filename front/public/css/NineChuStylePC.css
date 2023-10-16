@@ -79,6 +79,7 @@ button:has(> img) {
   margin: auto;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+  padding-bottom: 2rem;
   width: 70%;
 }
 /* .full-main */
@@ -204,15 +205,6 @@ button:has(> img) {
 }
 .basic-form > menu > ul:has(> :only-child) {
   justify-content: center;
-}
-
-/* .basic-main */
-.basic-main {
-  margin-top: 2rem;
-}
-/* .full-main */
-.full-main {
-  margin-top: 10rem;
 }
 
 /* specific elements */
