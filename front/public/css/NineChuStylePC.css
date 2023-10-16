@@ -28,7 +28,8 @@ p,
 label,
 span,
 pre,
-code {
+code,
+::marker {
   color: #ffffdfff;
 }
 code {
@@ -67,7 +68,8 @@ button:has(> img) {
 :is(a, button) > img:only-child {
   height: 100%;
 }
-:is(input:is([type="text"], [type="email"], [type="password"], [type="number"], [type="tel"], [type="url"], [type="search"])):hover:not(:focus), :is(button:not(:has(> img)), a:has(> img:only-child)):hover:not(:focus) {
+:is(input:is([type="text"], [type="email"], [type="password"], [type="number"], [type="tel"], [type="url"], [type="search"])):hover:not(:focus),
+:is(button:not(:has(> img)), a:has(> img:only-child)):hover:not(:focus) {
   outline: #a0a080ff solid 1px;
   outline-offset: 1px;
 }
@@ -75,14 +77,12 @@ button:has(> img) {
 /* .basic-main */
 .basic-main {
   margin: auto;
-  margin-top: 2rem;
   border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
+  border-top-right-radius: 0.5rem;
   width: 70%;
 }
 /* .full-main */
 .full-main {
-  margin-top: 10rem;
   padding-bottom: 2rem;
   width: 100%;
 }
@@ -173,17 +173,17 @@ button:has(> img) {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.basic-form > .field {
+:is(.basic-form > .field, .form-laf > label) {
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
   background-color: #003060ff;
   padding: 5%;
 }
-.basic-form > .field:first-of-type ~ .field {
+:is(.basic-form > .field:first-of-type ~ .field, .form-laf > label:first-of-type ~ label) {
   margin-top: 0.5rem;
 }
-.basic-form > .field > input:is([type="text"], [type="email"], [type="password"], [type="number"], [type="tel"], [type="url"], [type="search"]) {
+:is(.basic-form > .field, .form-laf > label) > input:is([type="text"], [type="email"], [type="password"], [type="number"], [type="tel"], [type="url"], [type="search"]) {
   margin-top: 0.5rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
@@ -204,6 +204,15 @@ button:has(> img) {
 }
 .basic-form > menu > ul:has(> :only-child) {
   justify-content: center;
+}
+
+/* .basic-main */
+.basic-main {
+  margin-top: 2rem;
+}
+/* .full-main */
+.full-main {
+  margin-top: 10rem;
 }
 
 /* specific elements */
