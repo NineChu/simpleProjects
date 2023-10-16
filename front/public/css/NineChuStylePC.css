@@ -77,7 +77,7 @@ button:has(> img) {
 /* .basic-main */
 .basic-main {
   margin: auto;
-  border-top-left-radius: .5rem;
+  border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   width: 70%;
 }
@@ -196,7 +196,7 @@ button:has(> img) {
   padding: 0.7rem;
   font-size: 1rem;
 }
-.basic-form > menu > ul {
+.basic-form > menu > ul { /* display grid */
   list-style-type: none;
   display: flex;
   justify-content: space-between;
