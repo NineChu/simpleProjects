@@ -69,6 +69,7 @@ button:has(> img) {
 }
 :is(input:is([type="text"], [type="email"], [type="password"], [type="number"], [type="tel"], [type="url"], [type="search"])):hover:not(:focus),
 :is(button:not(:has(> img)), a:has(> img:only-child)):hover:not(:focus) {
+  /* test complete :is and add textarea */
   outline: #a0a080ff solid 1px;
   outline-offset: 1px;
 }
